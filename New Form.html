@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/newform.css"/>
+     <title>Drop Down List</title>
+    
+</head>
+<body>
+ <!--HTML form, belajar  membuat form isian-->
+ 
+ <div class="login">
+ <form action="#" method="post" id="validasi">
+    <h2>Formulir Pendaftaran Organisasi Kampus</h2>
+    <table border="0" cellpadding="5" cellspacing="">
+        <tr>
+            <td><label class="label">Nama</label></td>
+            <td style="text-align: right;">: </td>
+            <td><input type="text" name="name" placeholder="First Name" id="name" size="45" required><br><br>
+            <input type="text" name="name" placeholder="Last Name" size="45" required></td>
+        </tr>
+        <tr>
+            <td><label class="label">Tempat/Tanggal Lahir</label></td>
+            <td style="text-align: right;">: </td>
+            <td><input type="text" name="ttl" placeholder="Kota Kelahiran" id="ttl" size="28" required>
+            <input type="date" name="bday" min="0000-01-02" id="bday" required></td>
+        </tr>
+        <tr>
+            <td><label class="label">Jenis Kelamin</label></td>
+            <td style="text-align: right;">: </td>
+            <td><input type="radio" name="jk" value="laki-laki" id="jk" size="45">Laki-Laki<br>
+            <input type="radio" name="jk" value="perempuan" id="jk">Perempuan</td>
+        </tr>
+        <tr>
+       
+            <td><label class="label">Fakultas</label></td>
+            <td style="text-align: right;">: </td>
+            <td>
+                <select name="fakultas" id="fakultas" required>
+                    <option value="pilih fakultas" selected>--Pilih Fakultas--</option>
+                    <option value="kedokteran">Kedokteran</option>
+                    <option value="psikologi">Psikologi</option>
+                    <option value="pendidikan">Pendidikan</option>
+                    <option value="mipa">MIPA</option>
+                    <option value="hukum">Hukum</option>
+                    <option value="teknik">Teknik</option>
+                    <option value="desain">Seni Rupa dan Desain</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label class="label">Alamat</label></td>
+            <td style="text-align: right;">: </td>
+            <td>
+                <textarea cols="40" rows="5" name="Alamat" id="Alamat" placeholder="Masukkan Alamat"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td><label class="label">Username</label></td>
+            <td style="text-align: right;">: </td>
+            <td><input type="username" name="username" placeholder="Username" id="username" size="45" required></td>
+        </tr>
+        <tr>
+            <td><label class="label">Password</label></td>
+            <td style="text-align: right;">: </td>
+            <td><input type="password" name="password" placeholder="Password" id="password" size="45" required></td>
+        </tr>
+        <tr>
+            <td><label class="label">Pilihan Divisi</label></td>
+            <td style="text-align: right;">: </td>
+            <td><input type="checkbox" name="divisi" value="divisi">Media<br>
+            <input type="checkbox" name="divisi" value="divisi">Kaderisasi<br>
+            <input type="checkbox" name="divisi" value="divisi">Humas</td>
+        </tr>
+        <tr>
+            <td><input class="submit" type="submit" value="Submit"> <input class="reset" type="reset" value="Reset"></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    </form>
+
+<script>
+    let validasi = 
+    document.getElementById("validasi").value;
+
+    validasi.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let nama = document.getElementById("nama");
+        let bday = document.getElementById("bday");
+        let jk = document.getElementById("jk");
+        let username = document.getElementById("username");
+        let password = document.getElementById("password");
+        let cluster = document.getElementById("cluster");
+        let aktivitas = document.getElementById("aktivitas"); 
+
+        if (nama.value == "" || bday.value == ""  || jk.value == "" || username.value == "" || password.value == "" || cluster.value == "" || aktivitas.value == "") {
+            alert('Anda Harus Mengisi Data dengan Lengkap!');
+        } else {
+            alert('Terima Kasih telah Mengisi Data');
+
+            nama.value == "";
+            bday.value == "";
+            jk.value == "";
+            username.value == "";
+            password.value == "";
+            cluster.value == "";
+            aktivitas.value == "";
+
+        }
+    });
+</script>
+
+
+    <!--<script type="text/javascript">
+        function validasi() {
+            var nama = document.getElementById("nama").value;
+            var bday = document.getElementById("bday").value;
+            var jk = document.getElementById("jk").value;
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var cluster = document.getElementById("cluster").value;
+            var aktivitas = document.getElementById("aktivitas").value;
+    
+            if (nama !=""&& bday !=""&& jk !=""&& username !=""&& password !=""&& cluster !=""&& aktivitas !="") {
+                return true;
+            }
+            else {
+                alert('Anda Harus Mengisi Data dengan Lengkap!');
+            }
+        }
+    </script>-->
+    </div>
+
+    
+</body>
+</html>

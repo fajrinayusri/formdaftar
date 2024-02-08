@@ -1,0 +1,41 @@
+body{
+    /*background-color: aliceblue;*/
+    /*background-image: url(../gambar\ html/pink-sky.jpg);*/
+    background-size: cover;
+    background-image: linear-gradient(to bottom right, #cd9cf2, #f6f3ff);
+    font-family: times new roman;
+    color:#555;
+}
+h2 {
+    color: #555;
+    text-align: center;
+    font-size: 25pt;
+    margin-top: -10px;
+}
+
+.login {
+    padding: 50px;
+    margin: 40px auto;
+    width: 600px;
+    background: #fff;
+    border-radius: 3px;
+    opacity: 95%;
+}
+
+.submit {
+    background: green;
+    color: #fff;
+    border: 0;
+    font-size: 12pt;
+    font-family: times new roman;
+    padding: 8px 12px;
+}
+
+.reset {
+    background: red;
+    color: #fff;
+    border: 0;
+    font-size: 12pt;
+    font-family: times new roman;
+    padding: 8px 12px;
+}
